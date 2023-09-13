@@ -7,4 +7,18 @@
 img {
     height: 200px;
     width: 200px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+body{
+    background: purple;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+#lista-publicaciones {
+    background: blueviolet;
+    min-height: 400px;
+    padding: 40px;
 }
