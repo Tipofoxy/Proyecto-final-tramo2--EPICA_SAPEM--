@@ -16,13 +16,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     const descripcion = document.querySelector('#detalle-post')
     const url_imagen = document.querySelector('#url-img')
     const fecha = document.querySelector('#fecha')
+    const username = document.querySelector('#username-post').value;
 
 
     titulo.value = publicacion.titulo;
     descripcion.value = publicacion.descripcion;
     url_imagen.value = publicacion.url_imagen;
     fecha.value = publicacion.fecha;
-
+    username.value = publicacion.username;
 
 })
 
@@ -35,6 +36,7 @@ formGuardar.addEventListener('submit', async (e) => {
     const descripcion = document.querySelector('#detalle-post').value;
     const url_imagen = document.querySelector('#url-img').value;
     const fecha = document.querySelector('#fecha').value;
+    const username = document.querySelector('#username-post').value;
 
     // Enviar al servidor
     const response = await fetch(`/publicacion/${id}`, {
@@ -42,7 +44,7 @@ formGuardar.addEventListener('submit', async (e) => {
         headers: {
             'Content-Type':'application/json'
         },
-        body: JSON.stringify({ titulo, descripcion, url_imagen, fecha})
+        body: JSON.stringify({ titulo, descripcion, url_imagen, fecha, username})
     })
     const data = await response.json();
 

@@ -15,6 +15,7 @@ const mostrarPublicaciones = (publicaciones, elementoHtml) => {
             <img src="${publicacion.url_imagen}" class="rounded" height=200 >
             <div class="d-flex flex-column justify-content-between">
                 <h5>${publicacion.titulo}</h5>
+                <h4>${publicacion.username}</h4>
                 <p>${publicacion.descripcion}</p>
                 <p>${publicacion.fecha}</p>
             </div>
